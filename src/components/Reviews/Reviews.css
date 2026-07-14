@@ -1,4 +1,4 @@
-.courses {
+.reviews {
     padding: 100px 0;
 
     background: #0f0f20;
@@ -7,7 +7,7 @@
 
 }
 
-.courses h2 {
+.reviews h2 {
     text-align: center;
 
     font-size: 40px;
@@ -16,20 +16,17 @@
 
 }
 
-.courses__grid {
+.reviews__grid {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 30px;
+
 }
 
-.course-card {
-    padding: 30px;
-
-    border-radius: 20px;
-
-    /* background: #18182d; */
+.review-card {
+    /* background:#18182d; */
     background: rgba(255, 255, 255, .05);
 
     backdrop-filter: blur(18px);
@@ -38,65 +35,66 @@
 
     box-shadow:
         0 10px 40px rgba(0, 0, 0, .35);
-    transition: .3s;
+    padding: 30px;
+
+    border-radius: 20px;
 }
 
-.course-card:hover {
-    border-color: #6c63ff;
+.review-card:hover {
     transform: translateY(-10px);
+    border-color: #6c63ff;
 }
 
-.course-card p {
-    color: #aaa;
+.review-text {
+    color: #ccc;
+    line-height: 1.6;
     padding: 6px 0 0 0;
 }
 
+.review-card h3 {
+    font-size: 22px;
+    margin: 15px 0 6px 0;
+}
+
+.review-card span {
+    font-size: 17px;
+    color: #6c63ff;
+}
 
 @media(max-width:1200px) {
-    .courses__grid {
-        grid-template-columns: repeat(2, 1fr);
 
+    .reviews__grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 @media(max-width:768px) {
-    .courses {
-        padding: 80px 0;
 
+    .reviews {
+        padding: 80px 0;
     }
 
-
-    .courses h2 {
+    .reviews h2 {
         font-size: 32px;
-
         margin-bottom: 35px;
     }
 
-
-    .courses__grid {
+    .reviews__grid {
         grid-template-columns: 1fr;
-
         gap: 20px;
-
     }
 
-    .course-card {
-
+    .review-card {
         padding: 25px;
-
     }
 
 }
 
 @media(max-width:375px) {
-    .courses h2 {
+
+    .reviews h2 {
         font-size: 28px;
-
-    }
-
-    .course-card {
-        padding: 20px;
-
     }
 
 }

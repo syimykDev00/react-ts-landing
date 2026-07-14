@@ -1,13 +1,274 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    /* background:#080814; */
+    background:
+        radial-gradient(circle at top left, #6c63ff25 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #00d4ff18 0%, transparent 35%),
+        #0b0b18;
+
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0b0b18;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#6c63ff;
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#5147ff;
+}
+
+::selection{
+
+    background:#6c63ff;
+
+    color:white;
+}
+
+img{
+
+    transition:.35s;
+}
+
+img:hover{
+    transform:scale(1.02);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+
+    outline:2px solid #6c63ff;
+    outline-offset:4px;
+}
+
+:root {
+    --bg: #0b0b18;
+    --bg-card: rgba(255, 255, 255, .05);
+    --bg-card-hover: rgba(255, 255, 255, .08);
+
+    --primary: #6c63ff;
+    --primary-hover: #564df7;
+
+    --text: #ffffff;
+    --text-secondary: #b8b8c8;
+
+    --border: rgba(255, 255, 255, .08);
+
+    --shadow: 0 20px 50px rgba(0, 0, 0, .35);
+
+    --radius: 24px;
+}
+
+section {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.section-title {
+
+    font-size: clamp(34px, 5vw, 56px);
+
+    color: white;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    font-weight: 700;
+}
+
+.section-text {
+
+    max-width: 700px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+    color: #b6b6c7;
+
+    line-height: 1.8;
+}
+
+.course-card,
+.advantage-card,
+.stat-card,
+.teacher-card,
+.review-card,
+.faq-item {
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(18px);
+
+    border-radius: 24px;
+
+    transition: .35s;
+
+    box-shadow: var(--shadow);
+}
+
+.course-card:hover,
+.advantage-card:hover,
+.teacher-card:hover,
+.review-card:hover,
+.stat-card:hover {
+
+    transform: translateY(-10px);
+
+    background: var(--bg-card-hover);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 25px 60px rgba(108, 99, 255, .25);
+}
+
+.courses__grid,
+.advantages__grid,
+.teachers__grid,
+.reviews__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 30px;
+}
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 17px 34px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: linear-gradient(90deg,
+            #6c63ff,
+            #7a73ff);
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .35s;
+}
+
+.btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(108, 99, 255, .45);
+}
+
+.teacher-card img {
+
+    width: 130px;
+
+    height: 130px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin: 0 auto 25px;
+
+    border: 4px solid rgba(108, 99, 255, .3);
+}
+
+.review-stars {
+
+    margin-bottom: 18px;
+
+    color: #ffd43b;
+
+    font-size: 18px;
+}
+
+.faq-item {
+
+    padding: 25px;
+
+    cursor: pointer;
+}
+
+.faq-item:hover {
+
+    border-color: #6c63ff;
+}
+
+.contact button {
+
+    width: 100%;
+}
+
+.contact__form {
+
+    max-width: 620px;
+
+    margin-left: auto;
+}
+
+.footer {
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.footer a {
+
+    transition: .3s;
+}
+
+.footer a:hover {
+
+    color: #6c63ff;
 }

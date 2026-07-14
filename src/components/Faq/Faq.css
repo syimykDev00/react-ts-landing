@@ -1,0 +1,149 @@
+.faq {
+    padding: 100px 0;
+    background: #080817;
+    color: #ffffff;
+}
+
+.faq__header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.faq__header h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.faq__header p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #b8b8c7;
+    line-height: 1.7;
+}
+
+.faq__list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq__item {
+    background: #121226;
+    border: 1px solid #222240;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq__item:hover {
+    border-color: #6c63ff;
+}
+
+.faq__question {
+    width: 100%;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.faq__question.active {
+    color: #6c63ff;
+}
+
+.faq__icon {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.faq__answer.show {
+    max-height: 250px;
+}
+
+.faq__answer p {
+    padding: 0 30px 25px;
+    color: #b8b8c7;
+    line-height: 1.8;
+}
+
+@media(max-width:1200px){
+    .faq__list{
+        max-width:800px;
+    }
+
+}
+
+@media(max-width:768px){
+    .faq{
+        padding:80px 0;
+    }
+
+    .faq__header{
+        margin-bottom:40px;
+    }
+
+    .faq__header h2{
+        font-size:34px;
+    }
+
+    .faq__question{
+        padding:20px;
+        font-size:18px;
+        gap:15px;
+    }
+
+    .faq__icon{
+        font-size:24px;
+        flex-shrink:0;
+    }
+
+    .faq__answer p{
+        padding:0 20px 20px;
+    }
+
+}
+
+
+@media(max-width:576px){
+    .faq__header h2{
+        font-size:30px;
+    }
+
+    .faq__header p{
+        font-size:15px;
+    }
+
+    .faq__question{
+        font-size:16px;
+        padding:18px;
+    }
+
+
+}
+
+
+@media(max-width:375px){
+    .faq__header h2{
+        font-size:26px;
+    }
+    .faq__question{
+        font-size:15px;
+    }
+
+}
