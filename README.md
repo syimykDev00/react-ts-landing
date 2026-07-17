@@ -1,7 +1,5 @@
 # 🚀 CodeSphere - React TypeScript Landing Page
 
-![CodeSphere Preview](https://codesphere-nu.vercel.app/)
-
 A modern and responsive landing page built with **React + TypeScript**.  
 The project demonstrates a clean component-based architecture, responsive UI, animations, and modern frontend development practices.
 
