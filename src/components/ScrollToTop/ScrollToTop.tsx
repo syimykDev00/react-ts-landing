@@ -13,13 +13,6 @@ const ScrollToTop = () => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, []);
 
-    const scrollTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
-    }
-
     return (
         <>
             <a href="#hero">
