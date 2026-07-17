@@ -2,11 +2,10 @@ import React from 'react';
 import { teachers } from '../../data/teachers';
 import './Teachers.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation'
-import 'swiper/css/pagination';
 
 import {motion} from 'framer-motion';
 import { fadeUp } from '../../animations/variant';
@@ -18,7 +17,7 @@ const Teachers = () => {
             <div className='container'>
                 <h2>Наши преподаватели</h2>
                 <Swiper
-                    modules={[Navigation, Pagination, Autoplay]}
+                    modules={[Navigation, Autoplay]}
                     spaceBetween={30}
                     loop={true}
                     autoplay={{
@@ -26,9 +25,6 @@ const Teachers = () => {
                         disableOnInteraction: false
                     }}
                     navigation
-                    pagination={{
-                        clickable: true
-                    }}
                     breakpoints={{
                         320: {
                             slidesPerView: 1
